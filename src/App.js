@@ -1,16 +1,27 @@
 import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Main from "./components/Main";
+import { Home } from "./pages/Home";
+import { Menu } from "./pages/Menu";
+import { Restaurant } from "./pages/Restaurant";
+import { Specials } from "./pages/Specials";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <body>
-        <Header />
-        <Main />
-        <Footer />
-      </body>
+      <Header className="header-component"/>
+      <hr />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/restaurant" element={<Restaurant />} />
+          <Route path="/specials" element={<Specials />} />
+        </Routes>
+      </div>
+      <hr />
+      <Footer />
     </>
   );
 }
