@@ -68,3 +68,10 @@ code {
   color:white;
   padding: 0.5rem 1rem;
 }
+
+.footer-logo {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 2rem;
+  gap: 1rem;
+}
