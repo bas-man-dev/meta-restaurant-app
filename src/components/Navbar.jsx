@@ -15,9 +15,9 @@ const Navbar = () => {
         </a>
         <ul>
           <CustomLink href="/">Home</CustomLink>
-          <CustomLink href="/menu">Try Our Menu</CustomLink>
-          <CustomLink href="/restaurant">Enjoy Our Restaurant</CustomLink>
-          <CustomLink href="/specials">Something Special</CustomLink>
+          <CustomLink href="/booking">Table Booking</CustomLink>
+          <CustomLink href="/restaurant">About Us</CustomLink>
+          <CustomLink href="/testimonials">Testimonials</CustomLink>
         </ul>
       </nav>
     </>

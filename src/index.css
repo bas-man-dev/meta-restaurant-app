@@ -59,14 +59,14 @@ code {
   text-decoration: none;
   color: inherit;
 }
-.active {
+a:focus {
   background-color: yellow;
 }
 
 .navbar > ul > li > a:hover {
-  background-color:olive;
-  color:white;
-  padding: 0.5rem 1rem;
+  background-color: olive;
+  color: white;
+  padding: 0.1rem 0.1rem;
 }
 
 .footer-logo {
