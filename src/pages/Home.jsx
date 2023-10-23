@@ -4,9 +4,10 @@ import Main from "../components/Main";
 export const Home = () => {
   return (
     <>
-      <h1 className="heading">Little Lemon</h1>
+      <h1 className="heading">
+        &#x1F378; Welcome to the Little Lemon Restaurant &#x1F378;
+      </h1>
       <Main />
-
     </>
   );
 };

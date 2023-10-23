@@ -13,6 +13,21 @@ code {
     monospace;
 }
 
+form {
+  display: grid;
+  place-items: center;
+  max-width: 50%;
+  gap: 2rem;
+  margin: auto;
+}
+
+.center {
+  border: 3px solid;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
 .container {
   margin: 1rem;
   text-align: center;
