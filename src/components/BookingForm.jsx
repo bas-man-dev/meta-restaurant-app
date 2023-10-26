@@ -1,13 +1,19 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
-export const BookingForm = ({ handleClick }) => {
+export const BookingForm = () => {
+  const form = useForm;
+  const { register, handleSubmit } = form;
+
+  const onSubmit = (data) => console.log(data);
+
   return (
     <>
       <div className="center">
-        <form action="">
+        <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="res-date">
             <p>Choose Date</p>
-            <input type="date" id="res-date" />
+            <input type="date" id="res-date" {...register} />
           </label>
           <label htmlFor="res-time">
             <p>Choose Time</p>
@@ -34,11 +40,7 @@ export const BookingForm = ({ handleClick }) => {
               <option value="graduation">Graduation</option>
             </select>
           </label>
-          <input
-            type="submit"
-            value={"Make Your Reservation"}
-            onClick={handleClick}
-          />
+          <button type="submit">Click to make your reservation</button>
         </form>
       </div>
     </>

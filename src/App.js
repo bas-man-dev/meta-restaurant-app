@@ -1,26 +1,36 @@
 import "./App.css";
+
+import {
+  createBrowserRouter,
+  Route,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+
+//pages
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import { Home } from "./pages/Home";
 import { Booking } from "./pages/Booking";
-import { Restaurant } from "./pages/Restaurant";
-import { Specials } from "./pages/Specials";
-import { Route, Routes } from "react-router-dom";
+import { About } from "./pages/About";
+import { Reviews } from "./pages/Reviews";
+// layouts
+import RootLayout from "./layouts/RootLayout";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route path="/home" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/booking" element={<Booking />} />
+      <Route path="/reviews" element={<Reviews />} />
+    </Route>
+  )
+);
 
 function App() {
   return (
     <>
-      <Header className="header-component" />
-      <hr />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/restaurant" element={<Restaurant />} />
-          <Route path="/specials" element={<Specials />} />
-        </Routes>
-      </div>
-      <hr />
+      <RouterProvider router={router} />
       <Footer />
     </>
   );
