@@ -13,7 +13,8 @@ code {
     monospace;
 }
 
-h1 {
+h1,
+.heading {
   text-align: center;
 }
 
