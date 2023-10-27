@@ -6,7 +6,7 @@ export default function RootLayout() {
   return (
     <div className="root-layout">
       <header>
-        <h1>Welcome to The Little Lemon Restaurant</h1>
+        <h1 style={{ margin: "5%" }}>Welcome to The Little Lemon Restaurant</h1>
         <nav className="navbar">
           <a className="logo" href="/">
             <img
@@ -32,7 +32,7 @@ export default function RootLayout() {
           </ul>
         </nav>
       </header>
-      <main>
+      <main style={{ marginTop: "5%" }}>
         <Outlet />
       </main>
     </div>

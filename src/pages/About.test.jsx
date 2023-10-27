@@ -3,7 +3,7 @@ import { About } from "./About";
 
 afterEach(cleanup);
 
-it("Home Page has a heading", () => {
+it("About Page has a heading", () => {
   render(<About />);
   const heading = screen.getByRole("heading", { level: 2 });
   expect(heading).toBeInTheDocument();
