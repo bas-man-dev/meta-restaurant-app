@@ -16,3 +16,9 @@ it("Home Page has an introduction and greeting", () => {
   );
   expect(blurb).toBeInTheDocument();
 });
+
+it("Has an Accessible picture of the restaurant", () => {
+  render(<Home />);
+  const image = screen.getByAltText(/little lemon restaurant/i);
+  expect(image).toBeInTheDocument();
+});
