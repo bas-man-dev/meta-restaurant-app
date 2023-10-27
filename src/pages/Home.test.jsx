@@ -12,7 +12,7 @@ it("Home Page has a heading", () => {
 it("Home Page has an introduction and greeting", () => {
   render(<Home />);
   const blurb = screen.getByText(
-    /the little lemon restaurant has been serving Chicago/
+    /the little lemon restaurant has been serving Chicago/i
   );
   expect(blurb).toBeInTheDocument();
 });
