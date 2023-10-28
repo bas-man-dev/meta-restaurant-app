@@ -7,7 +7,9 @@ export const BookingForm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    console.log("ressss", data.resTime);
+    alert(
+      `Your Booking has been made for ${data.resDate} \nWe look forward to seeing you at ${data.resTime}\n `
+    );
     reset();
   };
 
